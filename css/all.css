@@ -1,0 +1,303 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrap {
+  max-width: 1920px; /* 讓最大寬度為 1920px，但不會超出螢幕 */
+  width: 100%; /* 讓它適應不同裝置 */
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  background-color: #000; /* 設定整個頁面背景為黑色 */
+  color: #fff;
+  padding-top: 100px; /* 確保不會被 .nav 擋住 */
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.nav {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #eee;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background: #eee;
+  height: 50px;
+}
+.menu li {
+  padding: 7px;
+  position: relative; /* 確保下拉選單絕對定位 */
+}
+.menu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+}
+.menu li a:hover, .menu li a.active {
+  color: brown;
+}
+.menu img {
+  width: 65px; /* 控制圖片大小 */
+  height: auto;
+  display: block; /* 確保圖片不受 inline 標籤影響 */
+  align-self: center; /* 讓圖片在 flexbox 內垂直置中 */
+}
+
+.dropdown-open {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  width: 150px;
+}
+.dropdown-open li {
+  padding-top: 20px;
+  white-space: nowrap;
+}
+.dropdown-open li a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  font-size: 25px;
+}
+
+.banner {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: -30px;
+}
+.banner img {
+  width: 100%; /* 讓圖片自適應父容器 */
+  max-width: 1920px; /* 限制最大寬度 */
+  height: 800px; /* 固定高度，避免變形 */
+  -o-object-fit: cover;
+     object-fit: cover; /* ✅ 確保圖片不變形，自動裁切超出部分 */
+}
+.banner h1 {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 110px;
+  transform: translate(-50%, -50%); /* ✅ 精確置中 */
+}
+.banner p {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 25px;
+  transform: translate(-50%, -50%); /* ✅ 精確置中 */
+}
+
+h2 {
+  padding: 30px;
+  font-size: 40px;
+  line-height: 1.5;
+}
+
+.content {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #425B4F;
+  margin-bottom: 100px;
+}
+
+.swiper {
+  position: absolute;
+  top: 50%; /* ✅ 讓 Swiper 垂直置中 */
+  left: -300px; /* ✅ 讓 Swiper 靠左 */
+  transform: translateY(-50%); /* ✅ 確保垂直置中 */
+  max-width: 1500px;
+  height: 600px;
+}
+
+.swiper-slide {
+  text-align: left;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%; /* 讓圖片自適應父容器 */
+  max-width: 1500px; /* 限制最大寬度 */
+  height: 600px; /* 固定高度，避免變形 */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column; /*  讓 h3 和 p 垂直排列 */
+  text-align: center; /* 讓文字靠右 */
+  margin-right: 400px;
+}
+.text-content h3 {
+  font-size: 60px;
+  padding-bottom: 20px;
+  white-space: nowrap;
+}
+.text-content p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+h4 {
+  font-size: 50px;
+}
+
+.animated-text {
+  width: 1200px;
+  opacity: 0;
+  transform: translateY(-50px); /* 從上方 -50px 開始 */
+  animation: slideInDown 3s ease-in-out forwards;
+  line-height: 2;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-left: 360px;
+}
+.animated-text .active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === 定義從上到下滑入動畫 === */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* 讓文字從上滑入 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* 文字回到原始位置 */
+  }
+}
+.main-content {
+  display: flex;
+  justify-content: space-between; /* 讓左側圖片靠左，右側圖片+文字置中 */
+  align-items: center; /* 讓圖片垂直對齊 */
+  max-width: 1920px; /* 限制區塊最大寬度，避免過寬 */
+  margin: 0 auto; /* 讓內容區塊置中 */
+  background-color: #425B4F;
+}
+
+.left-img img {
+  width: 650px;
+  height: auto;
+  display: block;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column; /* 讓圖片 & p 垂直排列 */
+  align-items: center; /* 讓圖片 & p 置中 */
+  text-align: center; /* 讓 p 文字置中 */
+  flex: 1; /* 讓置中區塊可以自適應寬度 */
+}
+.center-content img {
+  width: 750px;
+  height: 480px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.center-content p {
+  font-size: 25px;
+  width: 800px;
+  text-align: left;
+  line-height: 1.5;
+}
+.center-content h5 {
+  font-size: 30px;
+  padding: 20px;
+  text-align: left;
+}
