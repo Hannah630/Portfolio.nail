@@ -77,12 +77,11 @@ h1 {
     position: relative;
     overflow: hidden;
     margin-top: -30px;
-    img{
-        width: 100%; /* 讓圖片自適應父容器 */
-        max-width: 1920px; /* 限制最大寬度 */
-        height: 800px; /* 固定高度，避免變形 */
-        object-fit: cover; /* ✅ 確保圖片不變形，自動裁切超出部分 */
-    }
+    height: 500px;
+    background-image: url("https://i.imgur.com/2g4Xwmv.jpeg");
+    background-size: cover; /* 讓圖片填滿 */
+    background-position: center; /* 圖片置中 */
+    background-repeat: no-repeat;
     h1{
         position: absolute;
         top: 70%; 
@@ -90,7 +89,7 @@ h1 {
         color: white;
         text-align: center;
         padding: 10px 20px;
-        font-size: 110px;
+        font-size: 90px;
         transform: translate(-50%, -50%); /* ✅ 精確置中 */
     }
     p{
@@ -228,4 +227,11 @@ h4{
         padding: 20px;
         text-align: left;
     }
+}
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
 }
