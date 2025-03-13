@@ -10,5 +10,9 @@ $(document).ready(function() {
         $dropdown.toggleClass("active"); // 切換 `active` 類別
         $dropdownMenu.slideToggle(); // 使用 `.slideToggle()` 來展開/收起
     });
+
+    $('.portfolio-content').children().each(function(i){
+        $(this).delay(500 * i).animate({ opacity: 1 }, 600);
+      });
   });
   

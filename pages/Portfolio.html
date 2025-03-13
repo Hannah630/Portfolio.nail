@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nailpic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/3.0.0/pure-min.css">
     <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -14,21 +15,92 @@
         <div class="nav">
             <ul class="menu">
                 <li><a href="#">@weirdmiii_nail</a></li>
-                <li><img src="https://i.imgur.com/5Om1YU9.png" alt="logo"></li>
+                <li><a href="../index.html"><img src="https://i.imgur.com/5Om1YU9.png" alt="logo"></a></li>
                 <li><a href="#" class="dropdown">About</a>
                   <ul class="dropdown-open">
-                    <li><a href="Portfolio.html">更多作品</a></li>
+                    <li><a href="/pages/Portfolio.html">更多作品</a></li>
                     <li><a href="../index.html">設計理念</a></li>
                     <li><a href="/pages/reserve.html">預約設計</a></li>
                   </ul>
                 </li>
             </ul>
         </div>
-      <div class="footer">
-        This will always appear at the bottom of the page, but <strong>not fixed</strong>.
-      </div>
-    </div>
-   
+      <div class="portfolio-main">
+        <div class="portfolio-content">
+          <p class="float-from-top">沒有界限 只有創意</p>
+          <p class="float-from-top down">傳統紋樣到個性風格，打造你的獨特美甲</p>
+          <p class="float-from-left">個性創意</p>
+          <p class="float-from-left down">暗黑系、塗鴉感、撞色拼貼，你有獨一無二的藝術品。</p>
+          <p class="float-from-right">優雅氣質</p>
+          <p class="float-from-right down">簡約暈染、輕奢法式、微光漸層，展現從容與品味。</p>
+          <p class="float-from-bottom">潮流前衛</p>
+          <p class="float-from-bottom down">鏡面金屬、浮雕立體感、朋克叛逆風，釋放你的個性態度！</p>
+          
 
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://i.imgur.com/U8cQdYs.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="https://i.imgur.com/JWXlhDx.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="https://i.imgur.com/4DSr1Cb.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="https://i.imgur.com/Jqy5P4R.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="https://i.imgur.com/ypSpdLv.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="https://i.imgur.com/QP1TMzW.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="https://i.imgur.com/JQdAbK9.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="https://i.imgur.com/i8FvwaY.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="https://i.imgur.com/UNDJuWz.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="https://i.imgur.com/Nx4DHED.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="https://i.imgur.com/Zf2LalU.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="https://i.imgur.com/CEyGDen.jpeg" alt=""></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+
+          <div class="autoplay-progress">
+            <svg viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+          </div>
+
+        </div>
+      </div>
+          
+        <div class="footer">
+            This will always appear at the bottom of the page, but <strong>not fixed</strong>.
+        </div>
+    </div>
+    
+        <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+      }
+    });
+  </script>
 </body>
 </html>
