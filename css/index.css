@@ -11,6 +11,7 @@ body {
   background-color: #000; /* 設定整個頁面背景為黑色 */
   color: #fff;
   padding-top: 100px; /* 確保不會被 .nav 擋住 */
+  height: 100%;
 }
 
 h1 {
@@ -18,14 +19,14 @@ h1 {
 }
 
 .nav {
-  height: 50px;
+  height: 30px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: #eee;
-  padding: 10px 0;
   z-index: 1000;
+  padding: 10px 0;
 }
 
 .menu {
@@ -51,7 +52,7 @@ h1 {
   color: brown;
 }
 .menu img {
-  width: 65px; /* 控制圖片大小 */
+  width: 50px; /* 控制圖片大小 */
   height: auto;
   display: block; /* 確保圖片不受 inline 標籤影響 */
   align-self: center; /* 讓圖片在 flexbox 內垂直置中 */
@@ -82,7 +83,7 @@ h1 {
   text-align: center;
   position: relative;
   overflow: hidden;
-  margin-top: -30px;
+  margin-top: -40px;
   height: 500px;
   background-image: url("https://i.imgur.com/2g4Xwmv.jpeg");
   background-size: cover; /* 讓圖片填滿 */
@@ -91,23 +92,24 @@ h1 {
 }
 .banner h1 {
   position: absolute;
-  top: 70%;
-  left: 30%;
+  top: 55%;
+  left: 25%;
   color: white;
   text-align: center;
   padding: 10px 20px;
-  font-size: 90px;
+  font-size: 75px;
   transform: translate(-50%, -50%); /* ✅ 精確置中 */
 }
 .banner p {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 75%;
   color: white;
   text-align: center;
   padding: 10px 20px;
-  font-size: 25px;
+  font-size: 18px;
   transform: translate(-50%, -50%); /* ✅ 精確置中 */
+  line-height: 1.5em;
 }
 
 h2 {
@@ -247,11 +249,11 @@ h4 {
 }
 
 .footer {
-  position: absolute;
-  right: 0;
   bottom: 0;
   left: 0;
+  width: auto; /* 讓 footer 滿版 */
   padding: 1rem;
   background-color: #efefef;
+  color: #000;
   text-align: center;
 }

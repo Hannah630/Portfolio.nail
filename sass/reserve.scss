@@ -1,0 +1,68 @@
+.reserve-content{
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    h6{
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
+    p{
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+}
+.form-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column; /* 讓內部元素垂直排列 */
+    margin: auto; /* 讓方塊本身置中 */
+    margin-bottom: 50px;
+    .pure-form {
+        width: 90%; /* 預設為 90% */
+        max-width: 500px; /* 限制最大寬度，防止太寬 */
+        background: #fff; /* 可以加背景色 */
+        color: #000;
+        padding: 20px;
+        border-radius: 10px; /* 圓角 */
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+        input{
+            width: 100%;
+        }
+        label{
+           text-align: center;
+           padding-bottom: 5px;
+           font-weight: 700;
+        }
+    }
+    /* 讓輸入框內的文字水平置中 */
+    .pure-control-group {
+        display: flex;
+        flex-direction: column; /* 讓 label 和 input 垂直排列 */
+        align-items: center; /* 讓 label 置中 */
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .pure-controls{
+        display: flex;
+        flex-direction: column; /* 讓內容垂直排列 */
+        align-items: flex-start; /* 水平置中 */
+        gap: 5px; /* 控制間距 */
+        margin-right: 20px;
+        
+        .pure-checkbox{
+            display: flex;
+            align-items: center;
+            gap: 5px; /* 調整 checkbox 和文字之間的距離 */
+            white-space: nowrap; /* 防止文字換行 */;
+            
+        }
+        .pure-button{
+            display: block;
+            width: auto;
+            margin-top: 5px; 
+            margin-left: 30px;
+        }
+    }
+}
